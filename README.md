@@ -5,6 +5,6 @@ You can find the p5.js-Library here: https://p5js.org/
 
 ### BubbleSort
 https://de.wikipedia.org/wiki/Bubblesort
-
+***
 ### Bogosort, Alexsort, Monkeysort oder Stupidsort
 https://de.wikipedia.org/wiki/Bogosort
