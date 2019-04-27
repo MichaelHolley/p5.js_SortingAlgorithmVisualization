@@ -39,10 +39,9 @@ function draw() {
   displayBars();
 }
 
-
 function displayBars() {
   for(let k = 0; k < values.length; k++) {
-    if(k == i - 1)
+    if(k == i)
       fill(255, 0, 0);
     else if(isSorted)
       fill(255, 0, 0);
