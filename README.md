@@ -8,3 +8,6 @@ https://de.wikipedia.org/wiki/Bubblesort
 ***
 ### Bogosort, Alexsort, Monkeysort oder Stupidsort
 https://de.wikipedia.org/wiki/Bogosort
+***
+### InsertionSort
+https://de.wikipedia.org/wiki/Insertionsort
