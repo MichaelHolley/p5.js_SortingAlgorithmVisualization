@@ -1,4 +1,4 @@
-let values = new Array(500);
+let values = new Array(100);
 let maxBarLength;
 let barWidth;
 
@@ -13,22 +13,22 @@ function setup() {
 
 let isSorted = false;
 let comparisons = 0;
-let i = 1;
+let i = 0;
 
 function draw() {
   background(50);
   noStroke();
   frameRate(60);
 
-  if (i < values.length) {
-    let temp = values[i];
-    let j = i;
-    while(j > 0 && values[j-1] > temp) {
-      values[j] = values[j-1];
-      j--;
+  if (i < values.length - 1) {
+    for(let j = i + 1; j < values.length; j++) {
+      if(values[i] > values[j]) {
+        let temp = values[i];
+        values[i] = values[j];
+        values[j] = temp;
+      }
       comparisons++;
     }
-    values[j] = temp;
   } else {
       console.log("finished");
       isSorted = true;
@@ -41,9 +41,7 @@ function draw() {
 
 function displayBars() {
   for(let k = 0; k < values.length; k++) {
-    if(k == i)
-      fill(255, 0, 0);
-    else if(isSorted)
+    if(isSorted)
       fill(255, 0, 0);
     else
       fill(200);

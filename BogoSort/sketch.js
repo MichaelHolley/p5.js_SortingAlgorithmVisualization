@@ -17,11 +17,10 @@ let isSortedBool = false;
 function draw() {
   background(50);
   noStroke();
-  frameRate(10);
+  frameRate(60);
 
   values = shuffle(values);
   attempts++;
-  
   if(isSorted()) {
     console.log("finished");
     isSortedBool = true;
@@ -57,6 +56,6 @@ function isSorted() {
     if (values[i-1] > values[i]) {
         return false;
     }
-}
+  }
   return true;
 }
