@@ -9,9 +9,8 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   maxBarLength = height - 10;
   barWidth = width / values.length;
-  values = new Array(maxBarLength);
   for (let i = 0; i < values.length; i++) {
-    values[i] = random(height);
+    values[i] = random(maxBarLength);
     states[i] = -1;
   }
   quickSort(values, 0, values.length - 1);
