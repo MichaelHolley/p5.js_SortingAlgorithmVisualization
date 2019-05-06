@@ -1,4 +1,4 @@
-let values = new Array(100);
+let values = new Array(500);
 let maxBarLength;
 let barWidth;
 
@@ -16,9 +16,9 @@ let comparisons = 0;
 let i = 0;
 
 function draw() {
+  frameRate(10);
   background(50);
   noStroke();
-  frameRate(60);
 
   if (i < values.length - 1) {
     for(let j = i + 1; j < values.length; j++) {
