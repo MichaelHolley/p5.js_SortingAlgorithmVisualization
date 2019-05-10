@@ -53,8 +53,6 @@ function draw() {
   i--;
 }
 
-
-
 function displayBars() {
   for(let k = 0; k < values.length; k++) {
     if(isSorted)
