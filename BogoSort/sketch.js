@@ -1,4 +1,4 @@
-let values = new Array(5);
+let values = new Array(10);
 let maxBarLength;
 let barWidth;
 
