@@ -19,7 +19,7 @@ https://de.wikipedia.org/wiki/Selectionsort
 ### QuickSort
 https://de.wikipedia.org/wiki/Quicksort
 
-Thanks to TheCodingTrain (Daniel Shiffman) to provide a good working version of the quicksort which I can hopefully use. I changed its colors and added/changed some variables to match my system and color-theme.
+Thanks to TheCodingTrain (Daniel Shiffman) to provide a good working version of the quicksort which I can hopefully use. I changed its colors and added/changed variables to match my system and color-theme.
 ***
 ### CocktailShakerSort
 https://de.wikipedia.org/wiki/Shakersort
