@@ -15,10 +15,10 @@ function setup() {
     algSelection = createSelect();
     algSelection.option('Bubble');
     algSelection.option('Insertion');
-    algSelection.option('Selection');
-    algSelection.option('Bogo');
-    algSelection.option('Cocktail');
-    algSelection.option('Quick');
+    // algSelection.option('Selection');
+    // algSelection.option('Bogo');
+    // algSelection.option('Cocktail');
+    // algSelection.option('Quick');
     algSelection.changed(changeAlg);
     algSelection.position(15, 15);
 
