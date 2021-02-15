@@ -4,7 +4,7 @@ let displaySelection;
 let canvasWidth = 1300;
 let canvasHeight = 800;
 
-let numberOfObjects = 500;
+let numberOfObjects = 300;
 let maxValueHeight = canvasHeight - 50;
 let itemWidth = canvasWidth / numberOfObjects;
 
@@ -77,7 +77,7 @@ function displayValues() {
                 break;
             case 'Dots':
                 strokeWeight(itemWidth);
-                point(k * itemWidth + itemWidth / 2, height - values[k] + itemWidth / 2);
+                point(k * itemWidth + itemWidth / 2, height - values[k]);
                 break;
         }
     }

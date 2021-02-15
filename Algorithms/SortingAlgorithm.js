@@ -5,7 +5,6 @@ class SortingAlgorithm {
 
     constructor(values) {
         this.values = values;
-        loop();
     }
 
     incComparisons() {

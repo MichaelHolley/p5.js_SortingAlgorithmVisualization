@@ -16,9 +16,8 @@ class BubbleSort extends SortingAlgorithm {
                     super.swap(values, j, j + 1);
                 }
             }
-        } else {
-            noLoop();
+
+            this.i++;
         }
-        this.i++;
     }
 }

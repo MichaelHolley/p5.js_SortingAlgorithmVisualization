@@ -1,4 +1,5 @@
 class InsertionSort extends SortingAlgorithm {
+    
     i = 1;
 
     constructor(values) {
@@ -6,7 +7,7 @@ class InsertionSort extends SortingAlgorithm {
     }
 
     step() {
-        if (this.i < values.length - 1) {
+        if (this.i < values.length) {
             let insert = values[this.i];
             let j = this.i;
             while (j > 0 && values[j - 1] > insert) {
@@ -15,9 +16,8 @@ class InsertionSort extends SortingAlgorithm {
                 j = j - 1;
             }
             values[j] = insert;
-        } else {
-            noLoop();
+
+            this.i++;
         }
-        this.i++;
     }
 }
