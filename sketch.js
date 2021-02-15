@@ -50,6 +50,9 @@ function changeAlg() {
         case 'Bubble':
             alg = new BubbleSort(values);
             break;
+        case 'Insertion':
+            alg = new InsertionSort(values);
+            break;
         default:
             alg = new BubbleSort(values);
             break;
