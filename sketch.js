@@ -15,7 +15,7 @@ function setup() {
     algSelection = createSelect();
     algSelection.option('Bubble');
     algSelection.option('Insertion');
-    // algSelection.option('Selection');
+    algSelection.option('Selection');
     // algSelection.option('Bogo');
     // algSelection.option('Cocktail');
     // algSelection.option('Quick');
@@ -46,12 +46,15 @@ function changeAlg() {
 
     setRandomValues();
 
-    switch(selection) {
+    switch (selection) {
         case 'Bubble':
             alg = new BubbleSort(values);
             break;
         case 'Insertion':
             alg = new InsertionSort(values);
+            break;
+        case 'Selection':
+            alg = new SelectionSort(values);
             break;
         default:
             alg = new BubbleSort(values);
