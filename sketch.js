@@ -4,7 +4,7 @@ let displaySelection;
 let canvasWidth = 1300;
 let canvasHeight = 800;
 
-let numberOfObjects = 300;
+let numberOfObjects = 200;
 let maxValueHeight = canvasHeight - 50;
 let itemWidth = canvasWidth / numberOfObjects;
 
@@ -85,7 +85,7 @@ function displayValues() {
         }
     }
 
-    stroke(5);
+    noStroke();
     textSize(17);
     text("Comparisons: " + alg.comparisons, 170, 30);
 }
