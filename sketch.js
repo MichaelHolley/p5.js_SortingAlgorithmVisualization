@@ -17,7 +17,7 @@ function setup() {
     algSelection.option('Insertion');
     algSelection.option('Selection');
     // algSelection.option('Bogo');
-    // algSelection.option('Cocktail');
+    algSelection.option('Shaker');
     // algSelection.option('Quick');
     algSelection.changed(changeAlg);
     algSelection.position(15, 15);
@@ -32,7 +32,7 @@ function setup() {
     alg = new BubbleSort(values);
 
     createCanvas(canvasWidth, canvasHeight);
-    frameRate(40);
+    frameRate(20);
     displayValues();
 }
 
@@ -56,6 +56,9 @@ function changeAlg() {
         case 'Selection':
             alg = new SelectionSort(values);
             break;
+        case 'Cocktail':
+            alg = new ShakerSort(values);
+            break;
         default:
             alg = new BubbleSort(values);
             break;
@@ -73,6 +76,10 @@ function displayValues() {
     let selectedDisplay = displaySelection.value();
 
     for (let k = 0; k < values.length; k++) {
+        if (k === alg.i) {
+            fill(255, 0, 0);
+        }
+
         switch (selectedDisplay) {
             case 'Bars':
                 noStroke();
@@ -83,6 +90,8 @@ function displayValues() {
                 point(k * itemWidth + itemWidth / 2, height - values[k]);
                 break;
         }
+
+        this.resetFill();
     }
 
     noStroke();
@@ -93,8 +102,12 @@ function displayValues() {
 function resetCanvas() {
     clear();
     background(50, 50, 50);
-    fill(200, 200, 200);
+    this.resetFill();
     stroke(200, 200, 200);
+}
+
+function resetFill() {
+    fill(200, 200, 200);
 }
 
 function setRandomValues() {
