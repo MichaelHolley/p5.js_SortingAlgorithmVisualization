@@ -71,10 +71,6 @@ function displayValues() {
     let selectedDisplay = displaySelection.value();
 
     for (let k = 0; k < values.length; k++) {
-        if (k === alg.i) {
-            fill(255, 0, 0);
-        }
-
         switch (selectedDisplay) {
             case 'Bars':
                 noStroke();
@@ -86,7 +82,7 @@ function displayValues() {
                 break;
         }
 
-        this.resetFill();
+        this.resetFillAndStroke();
     }
 
     noStroke();
@@ -97,12 +93,12 @@ function displayValues() {
 function resetCanvas() {
     clear();
     background(50, 50, 50);
-    this.resetFill();
-    stroke(200, 200, 200);
+    this.resetFillAndStroke();
 }
 
-function resetFill() {
+function resetFillAndStroke() {
     fill(200, 200, 200);
+    stroke(200, 200, 200);
 }
 
 function setRandomValues() {

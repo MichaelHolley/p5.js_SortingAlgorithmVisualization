@@ -1,7 +1,7 @@
 class ShakerSort extends SortingAlgorithm {
 
     swapped = true;
-    start = -1;
+    i = -1;
     end;
 
     constructor(values) {
@@ -12,9 +12,9 @@ class ShakerSort extends SortingAlgorithm {
     step() {
         if (this.swapped) {
             this.swapped = false;
-            this.start++;
+            this.i++;
 
-            for (let i = this.start; i <= this.end; i++) {
+            for (let i = this.i; i <= this.end; i++) {
                 if (values[i] > values[i + 1]) {
                     super.swap(values, i, i + 1);
                     this.swapped = true;
@@ -28,7 +28,7 @@ class ShakerSort extends SortingAlgorithm {
             this.swapped = false;
             this.end--;
 
-            for (let j = this.end; j >= this.start; j--) {
+            for (let j = this.end; j >= this.i; j--) {
                 if (values[j] > values[j + 1]) {
                     super.swap(values, j, j + 1);
                     this.swapped = true;
