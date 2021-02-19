@@ -1,38 +1,39 @@
 class ShakerSort extends SortingAlgorithm {
 
-    i;
+    swapped = true;
+    start = -1;
+    end;
 
     constructor(values) {
         super(values);
-        this.i = values.length - 1
+        this.end = values.length - 2;
     }
 
     step() {
-        let swapped = false;
-        let temp, j;
+        if (this.swapped) {
+            this.swapped = false;
+            this.start++;
 
-        // backwards
-        for (j = values.length - 1; j > this.i; j--) {
-            if (values[j] < values[j - 1]) {
-                super.swap(values, j, j -1);
-                swapped = true;
+            for (let i = this.start; i <= this.end; i++) {
+                if (values[i] > values[i + 1]) {
+                    super.swap(values, i, i + 1);
+                    this.swapped = true;
+                }
             }
-            super.incComparisons();
-        }
 
-        //forwards
-        for (j = 0; j < this.i; j++) {
-            if (values[j] > values[j + 1]) {
-                super.swap(values, j, j + 1);
-                swapped = true;
+            if (this.swapped == false) {
+                return;
             }
-            super.incComparisons();
-        }
 
-        if (!swapped) {
-            isSorted = true;
-        }
+            this.swapped = false;
+            this.end--;
 
-        this.i--;
+            for (let j = this.end; j >= this.start; j--) {
+                if (values[j] > values[j + 1]) {
+                    super.swap(values, j, j + 1);
+                    this.swapped = true;
+                }
+            }
+        }
     }
 }

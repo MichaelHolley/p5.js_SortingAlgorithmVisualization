@@ -16,9 +16,7 @@ function setup() {
     algSelection.option('Bubble');
     algSelection.option('Insertion');
     algSelection.option('Selection');
-    // algSelection.option('Bogo');
     algSelection.option('Shaker');
-    // algSelection.option('Quick');
     algSelection.changed(changeAlg);
     algSelection.position(15, 15);
 
@@ -56,11 +54,8 @@ function changeAlg() {
         case 'Selection':
             alg = new SelectionSort(values);
             break;
-        case 'Cocktail':
+        case 'Shaker':
             alg = new ShakerSort(values);
-            break;
-        default:
-            alg = new BubbleSort(values);
             break;
     }
 
